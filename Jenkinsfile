@@ -29,10 +29,13 @@ stage ('Clean') {
 agent {label 'awsDeploy || awsDeploy2'}
 steps {
 sh '''#!/bin/bash
-if [[ $(ps aux | grep -i "gunicorn" | tr -s " " | head -n 1 | cut -d " " -f 2) != 0 ]]
-then
-ps aux | grep -i "gunicorn" | tr -s " " | head -n 1 | cut -d " " -f 2 > pid.txt
-kill $(cat pid.txt)
+if pgrep -f "gunicorn" > /dev/null; then
+  # If it's running, kill all gunicorn processes
+  pkill -f "gunicorn"
+  echo "Stopped all gunicorn processes."
+else
+  echo "No gunicorn processes found."
+fi
 exit 0
 fi
 '''
