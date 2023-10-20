@@ -8,7 +8,7 @@ By:  Annie V Lam - Kura Labs
 
 SSH from Jenkins Server to Jenkins Agent Servers to deploy banking application on Gunicorn.
 
-Previously, in the Jenkins Deploy stage, it SSHed to a second server to deploy the banking application on Gunicorn.  For this deployment, we are configuring Jenkins Agent to SSH from Jenkins Server to Agent Servers to deploy the application 
+Previously, in the Jenkins Deploy stage, it SSHed to a second server to deploy the banking application on Gunicorn.  For this deployment, we are configuring Jenkins Agent to SSH from Jenkins Server to Agent Servers to deploy the application.
 
 ## Step #1 Diagram the VPC Infrastructure and the CI/CD Pipeline
 
