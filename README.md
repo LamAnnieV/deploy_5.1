@@ -76,7 +76,7 @@ To automate the construction of the application infrastructure, employ an instan
 Jenkins is used to automate the Build, Test, and Deploy the Banking Application.  To use Jenkins in a new EC2, all the proper installs to use Jenkins and to read the programming language that the application is written in need to be installed. In this case, they are Jenkins, Java, and Jenkins additional plugin "Pipeline Keep Running Step", which is manually installed through the UI interface.
 
 
-## Step #4 Other Installation
+## Step #4 Other Installations
 
 For the Jenkins Server install the following:
 
