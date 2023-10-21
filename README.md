@@ -21,7 +21,7 @@ Previously, in the Jenkins Deploy stage, it SSHed to a second server to deploy t
 
 GitHub serves as the repository from which Jenkins retrieves files to build, test, and deploy the URL Shortener application.
 
-**Changes in the repository for Jenkins Build Deploy_5v1**
+**Changes in the repository for Jenkins Build Deploy_5.1**
 
 In this deployment, the Jenkinsfile is already killing Guniocorn and deploying the application from the server D5.1_jenkins_agent in the "Clean" and "Deploy" stages, respectively.  We will use git to make changes in the [Jenkinsfile]() to include killing Gunicorn and deploying the application from the server D5.1_jenkins_agent server_2.
 
