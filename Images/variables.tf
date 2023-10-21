@@ -36,7 +36,7 @@ variable "aws_rt_1_name" {}
 
 variable "ami" {}
 variable "instance_type_1" {}
-#variable "instance_1_existing__subnet" {}      #f????or existing subnet
+#variable "instance_1_existing__subnet" {}      #????or existing subnet
 #variable "instance_1_existing_sg" {}      #????for existing sg
 #variable "instance_1_new_sg" {}  #need to test
 variable "instance_1_installs" {}
