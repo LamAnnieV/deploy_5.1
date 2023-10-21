@@ -23,7 +23,7 @@ GitHub serves as the repository from which Jenkins retrieves files to build, tes
 
 **Changes in the repository for Jenkins Build Deploy_5.1**
 
-In this deployment, the Jenkinsfile is already killing Guniocorn and deploying the application from the server D5.1_jenkins_agent in the "Clean" and "Deploy" stages, respectively.  We will use git to make changes in the [Jenkinsfile]() to include killing Gunicorn and deploying the application from the server D5.1_jenkins_agent server_2.
+In this deployment, the Jenkinsfile is already killing Guniocorn and deploying the application from the server D5.1_application_1 in the "Clean" and "Deploy" stages, respectively.  We will use git to make changes in the [Jenkinsfile]() including killing Gunicorn and deploying the application from the server D5.1_application_2.
 
 **GIT Commands**
 
@@ -45,7 +45,10 @@ git merge second
 git push
 ```
 
+
 **Edits to the Jenkinsfile**
+
+Jenkinsfiles is where the entire build and deployment process is defined, including stages, steps, and conditions. 
 
 ![Image](Images/Jenkinsfile.png)
 
@@ -69,11 +72,10 @@ For this application infrastructure, we want:
 1 Security Group with ports 22, 8000, 8080
 
 ```
+
+**Terraform**
+
 To automate the construction of the application infrastructure, employ an instance equipped with VS Code and Terraform. The [main.tf](Images/main.tf) and [variables.tf](Images/variables.tf) files, define the resources to be created and declare variables. Additionally, Terraform enables the execution of installation scripts. In the case of one instance, an installation script was utilized for [installing Jenkins](https://github.com/LamAnnieV/Instance_Installs/blob/main/01_jenkins_installs.sh).
-
-**Jenkins**
-
-Jenkins is used to automate the Build, Test, and Deploy the Banking Application.  To use Jenkins in a new EC2, all the proper installs to use Jenkins and to read the programming language that the application is written in need to be installed. In this case, they are Jenkins, Java, and Jenkins additional plugin "Pipeline Keep Running Step", which is manually installed through the UI interface.
 
 
 ## Step #4 Other Installations
@@ -101,11 +103,19 @@ sudo apt install python3.7-venv -y
 
 ## Step #5 Configure Jenkins Node, Jenkins Build and Run Build
 
+**Jenkins**
+
+Jenkins is used to automate the Build, Test, and Deploy the Banking Application.  To use Jenkins in a new EC2, all the proper installs to use Jenkins and to read the programming language in which the application is written in need to be installed. In this case, they are Jenkins, Java, and Jenkins additional plugin "Pipeline Keep Running Step", which is manually installed through the UI interface.
+
+
 **Configure Jenkins Node**
+
+Jenkins nodes also known as Jenkins agents, which are connected to the Jenkins manager node. This allows the manager to distribute and delegate work to the agents to execute. Tasks related to building and deploying software projects.
 
 Configure two [Jenkins Nodes](https://github.com/LamAnnieV/Jenkins/blob/main/jenkins_node.md)
 
 ![image](Images/Jenkin_nodes.png)
+
 
 
 **"Deploy_5.1" Build**
