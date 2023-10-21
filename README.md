@@ -105,7 +105,7 @@ sudo apt install python3.7-venv -y
 
 Configure two [Jenkins Nodes]([https://github.com/LamAnnieV/Jenkins.git](https://github.com/LamAnnieV/Jenkins/blob/main/jenkins_node.md)
 
-[image](Jenkin_nodes.png)
+[image](Images/Jenkin_nodes.png)
 
 
 **"Deploy_5.1" Build**
