@@ -25,7 +25,7 @@ GitHub serves as the repository from which Jenkins retrieves files to build, tes
 
 In this deployment, the Jenkinsfile is already killing Guniocorn and deploying the application from the server D5.1_jenkins_agent in the "Clean" and "Deploy" stages, respectively.  We will use git to make changes in the [Jenkinsfile]() to include killing Gunicorn and deploying the application from the server D5.1_jenkins_agent server_2.
 
-**GIT Commands**
+**GIT Commands to edit the Jenkinsfile**
 
 ```
 git clone https://github.com/kura-labs-org/c4_deployment-5.1.git
@@ -44,6 +44,10 @@ git switch main
 git merge second
 git push
 ```
+
+**Edits the Jenkinsfile**
+
+![Image](Images/Jenkinsfile.png)
 
 In order for the EC2 instance, where Jenkins is installed, to access the repository, you need to generate a token from GitHub and then provide it to the EC2 instance.
 
