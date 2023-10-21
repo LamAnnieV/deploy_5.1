@@ -25,7 +25,7 @@ GitHub serves as the repository from which Jenkins retrieves files to build, tes
 
 In this deployment, the Jenkinsfile is already killing Guniocorn and deploying the application from the server D5.1_jenkins_agent in the "Clean" and "Deploy" stages, respectively.  We will use git to make changes in the [Jenkinsfile]() to include killing Gunicorn and deploying the application from the server D5.1_jenkins_agent server_2.
 
-**GIT Commands to edit the Jenkinsfile**
+**GIT Commands**
 
 ```
 git clone https://github.com/kura-labs-org/c4_deployment-5.1.git
@@ -36,7 +36,7 @@ git fetch
 git push --mirror
 git branch second
 git switch second
-#make edits to the Jenkinsfile
+#make edits to the Jenkinsfile (see image below)
 git commit -a
 git push --set-upstream origin second
 #Run Jenkins build
@@ -45,7 +45,7 @@ git merge second
 git push
 ```
 
-**Edits the Jenkinsfile**
+**Edits to the Jenkinsfile**
 
 ![Image](Images/Jenkinsfile.png)
 
